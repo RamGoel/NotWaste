@@ -3,7 +3,7 @@ import React from "react"
 
 const CustomButton = (props) => {
     return (
-        <button title={props.title} style={{
+        <button className={props.className} title={props.title} style={{
             backgroundColor: "#6155ED",
             width: '100%',
             padding: 8,
@@ -16,7 +16,8 @@ const CustomButton = (props) => {
             justifyContent:'center',
             flexDirection:'row',
             alignItems:'center',
-            color:'white'
+            color:'white',
+            border:'none'
     
         }} onClick={props.onPress}>
             {props.text}

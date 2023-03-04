@@ -1,7 +1,7 @@
 import './App.css';
 import CustomerHome from './components/CustomerHome';
 import ExpertHome from './components/ExpertHome';
-import Login from './components/Login';
+import InputForm from './components/InputForm';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import ErrorPage from './components/ErrorPage';
 
@@ -9,7 +9,7 @@ import ErrorPage from './components/ErrorPage';
 const router=createBrowserRouter([
   {
     path:'/',
-    element:<Login />,
+    element:<InputForm />,
     errorElement:<ErrorPage />
   },
   {
@@ -28,7 +28,20 @@ function App() {
   return (
     <div className="App">
       {/* <CustomerHome /> */}
-      <RouterProvider router={router} />
+      <div style={{
+        backgroundColor:'black',
+        height:'100vh',
+        width:'100vw',
+        position:'absolute',
+        zIndex:-1,
+        opacity:0.9
+      }}></div>
+
+      <div className='d-flex flex-wrap'>
+        <InputForm/>
+        <ExpertHome />
+      </div>
+      {/* <RouterProvider router={router} /> */}
     </div>
   );
 }

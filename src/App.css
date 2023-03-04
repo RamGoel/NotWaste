@@ -4,7 +4,8 @@
 body{
   background-color: black;
   color: white;
-  overflow: hidden;
+  background: url('https://realfood.tesco.com/media/images/RFO-1400x919-ClassicPaella-a00aa895-f133-4f2b-a009-d17eb65c34a5-0-1400x919.jpg');
+  
 }
 
 *{
@@ -14,5 +15,12 @@ body{
 
 button:hover{
   opacity: 0.7;
+}
+
+input:focus{
+  outline: none;
+  border: none;
+  box-shadow: none;
+  outline-color: black;
 }
 
